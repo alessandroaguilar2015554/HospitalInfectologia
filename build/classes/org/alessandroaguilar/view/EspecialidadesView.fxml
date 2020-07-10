@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="394.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alessandroaguilar.controller.EspecialidadController">
+   <children>
+      <ImageView fitHeight="423.0" fitWidth="704.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/SB-fullslab.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="26.0" layoutY="14.0" text="Especialidades">
+         <font>
+            <Font name="Comic Sans MS Bold" size="32.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#c273f0" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ImageView fitHeight="342.0" fitWidth="580.0" layoutX="24.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/267455057019211.png" />
+         </image></ImageView>
+      <TableView fx:id="tblespecialidades" layoutX="116.0" layoutY="151.0" onMouseClicked="#seleccionar" prefHeight="205.0" prefWidth="364.0">
+        <columns>
+          <TableColumn fx:id="colcodigoEspecialidad" prefWidth="180.0" text="Codigo Especialidad" />
+          <TableColumn fx:id="colnombreEspecialidad" prefWidth="183.0" text="Nombre Especialidad" />
+        </columns>
+      </TableView>
+      <Label layoutX="269.0" layoutY="62.0" text="Codigo Especialidades" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbcodigoEspecialidad" layoutX="432.0" layoutY="57.0" prefWidth="150.0" />
+      <Button fx:id="btnagregar" layoutX="570.0" layoutY="136.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="31.0" prefWidth="97.0" style="-fx-background-color: #c15bd3;" text="Agregar" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Hyperlink layoutX="595.0" layoutY="14.0" onAction="#MenuPrincipal" prefHeight="32.0" prefWidth="97.0" text="Regresar">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="17.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#c273f0" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Hyperlink>
+      <Button fx:id="btneditar" layoutX="570.0" layoutY="182.0" mnemonicParsing="false" onAction="#edit" prefHeight="31.0" prefWidth="97.0" style="-fx-background-color: #c15bd3;" text="Editar" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btneliminar" layoutX="570.0" layoutY="231.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="31.0" prefWidth="97.0" style="-fx-background-color: #c15bd3;" text="Eliminar" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnreporte" layoutX="570.0" layoutY="278.0" mnemonicParsing="false" onAction="#imprimirReporte" prefHeight="31.0" prefWidth="97.0" style="-fx-background-color: #c15bd3;" text="Reporte" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="24.0" layoutY="97.0" text="Nombre Especialidad" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtnombreEspecialidad" layoutX="189.0" layoutY="93.0" />
+      <Button fx:id="btnreporteGeneral" layoutX="556.0" layoutY="327.0" mnemonicParsing="false" onAction="#imprimirReporteGeneral" prefHeight="22.0" prefWidth="125.0" style="-fx-background-color: #c15bd3;" text="Reporte General" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

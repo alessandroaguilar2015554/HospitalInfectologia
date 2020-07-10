@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alessandroaguilar.controller.ContactoUrgenciaController">
+   <children>
+      <ImageView fitHeight="447.0" fitWidth="723.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/SB-fullslab.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="102.0" fitWidth="122.0" layoutX="289.0" layoutY="-13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/glowing-neon-green-phone-icon_191227.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="14.0" layoutY="-2.0" text="Contacto Urgencia" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="33.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="208.0" fitWidth="759.0" layoutX="-75.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/glowing-lines-png-4.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblcontactoUrgencia" layoutX="14.0" layoutY="193.0" onMouseClicked="#seleccionar" prefHeight="200.0" prefWidth="581.0">
+        <columns>
+          <TableColumn fx:id="colcodigoUrgencia" prefWidth="115.0" text="Codigo Urgencia" />
+          <TableColumn fx:id="colcodigoPaciente" prefWidth="115.0" text="Codigo Paciente" />
+            <TableColumn fx:id="colnumeroContacto" prefWidth="136.0" text="Numero Contacto" />
+            <TableColumn fx:id="colnombres" prefWidth="104.0" text="Nombres" />
+            <TableColumn fx:id="colapellidos" prefWidth="110.0" text="Apellidos" />
+        </columns>
+      </TableView>
+      <Label layoutX="20.0" layoutY="69.0" text="Codigo Paciente" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="381.0" layoutY="69.0" text="Nombres" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="381.0" layoutY="106.0" text="Apellidos" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="106.0" text="Numero Contacto" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbcodigoPaciente" layoutX="139.0" layoutY="65.0" prefWidth="150.0" />
+      <TextField fx:id="txtnumeroContacto" layoutX="139.0" layoutY="102.0" />
+      <TextField fx:id="txtnombres" layoutX="466.0" layoutY="65.0" />
+      <TextField fx:id="txtapellidos" layoutX="466.0" layoutY="102.0" />
+      <Hyperlink layoutX="627.0" layoutY="-2.0" onAction="#MenuPrincipal" text="Regresar">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="17.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#1cb838" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Hyperlink>
+      <Button fx:id="btnagregar" layoutX="617.0" layoutY="200.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: #1cb838;" text="Agregar" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btneditar" layoutX="617.0" layoutY="254.0" mnemonicParsing="false" onAction="#edit" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: #1cb838;" text="Editar" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnreporte" layoutX="617.0" layoutY="361.0" mnemonicParsing="false" onAction="#imprimirReporte" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: #1cb838;" text="Reporte" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btneliminar" layoutX="617.0" layoutY="311.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: #1cb838;" text="Eliminar" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnreporteGeneral" layoutX="577.0" layoutY="150.0" mnemonicParsing="false" onAction="#imprimirReporteGeneral" style="-fx-background-color: #1cb838;" text="Reporte General" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="952.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alessandroaguilar.controller.TelefonoMedicoController">
+   <children>
+      <ImageView fitHeight="543.0" fitWidth="956.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/SB-fullslab.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="57.0" fitWidth="62.0" layoutX="891.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/279155802020211.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="162.0" layoutY="39.0" prefHeight="80.0" prefWidth="323.0" text="Telefono Medico">
+         <font>
+            <Font name="Comic Sans MS Bold" size="40.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startY="1.0">
+               <stops>
+                  <Stop color="#8ce87c" />
+                  <Stop color="#dee8b9" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ComboBox fx:id="cmbcodigoMedico" layoutX="298.0" layoutY="170.0" prefWidth="150.0" />
+      <TextField fx:id="txttelefonoPersonal" layoutX="704.0" layoutY="170.0" />
+      <TextField fx:id="txttelefonoTrabajo" layoutX="704.0" layoutY="218.0" />
+      <TextField fx:id="txtcodigoTelefonoMedico" layoutX="298.0" layoutY="218.0" />
+      <Label layoutX="175.0" layoutY="175.0" text="Codigo Medico" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="545.0" layoutY="174.0" text="Telefono Personal" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="17.0" />
+         </font>
+      </Label>
+      <Hyperlink layoutX="825.0" layoutY="28.0" onAction="#MenuPrincipal" prefHeight="41.0" prefWidth="94.0" text="Regresar" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="16.0" />
+         </font>
+      </Hyperlink>
+      <ImageView fitHeight="216.0" fitWidth="794.0" layoutX="-24.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/glowing-lines-png-4.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tbltelefonoMedico" layoutX="76.0" layoutY="287.0" onMouseClicked="#seleccionar" prefHeight="200.0" prefWidth="594.0">
+        <columns>
+          <TableColumn fx:id="colcodigoTelefono" prefWidth="182.0" text="Codigo Telefono Medico" />
+          <TableColumn fx:id="coltelefonoPersonal" minWidth="0.0" prefWidth="151.0" text="Telefono Personal" />
+            <TableColumn fx:id="coltelefonoTrabajo" prefWidth="139.0" text="Telefono Trabajo" />
+            <TableColumn fx:id="colcodigoMedico" prefWidth="121.0" text="Codigo Medico" />
+        </columns>
+      </TableView>
+      <Label layoutX="99.0" layoutY="222.0" text="Codigo Telefono Medico" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="17.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="180.0" fitWidth="190.0" layoutX="-11.0" layoutY="-21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/58443cbfa6515b1e0ad75b7d.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="47.0" fitWidth="51.0" layoutX="128.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/112434-glowing-green-neon-icon-symbols-shapes-shapes-diamond-frame.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="552.0" layoutY="221.0" text="Telefono Trabajo" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="17.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="47.0" fitWidth="51.0" layoutX="56.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/112434-glowing-green-neon-icon-symbols-shapes-shapes-diamond-frame.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="47.0" fitWidth="51.0" layoutX="505.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/112434-glowing-green-neon-icon-symbols-shapes-shapes-diamond-frame.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="47.0" fitWidth="51.0" layoutX="512.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/112434-glowing-green-neon-icon-symbols-shapes-shapes-diamond-frame.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnagregar" layoutX="785.0" layoutY="299.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="31.0" prefWidth="87.0" text="Agregar">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font></Button>
+      <Button fx:id="btneliminar" layoutX="785.0" layoutY="344.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="31.0" prefWidth="87.0" text="Eliminar">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font></Button>
+      <Button fx:id="btneditar" layoutX="785.0" layoutY="387.0" mnemonicParsing="false" onAction="#edit" prefHeight="31.0" prefWidth="87.0" text="Editar">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font></Button>
+      <Button fx:id="btnreporte" layoutX="785.0" layoutY="431.0" mnemonicParsing="false" onAction="#imprimirReporte" prefHeight="31.0" prefWidth="87.0" text="Reporte">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font></Button>
+      <Button fx:id="btnreporteGeneral" layoutX="785.0" layoutY="472.0" mnemonicParsing="false" onAction="#imprimirReporteGeneral" text="Reporte General" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="634.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alessandroaguilar.controller.MedicoEspecialidadController">
+   <children>
+      <ImageView fitHeight="448.0" fitWidth="643.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/AABNDRA.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="8.0" layoutY="-2.0" text="Medicos Especialidades" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="33.0" />
+         </font>
+      </Label>
+      <Hyperlink layoutX="549.0" layoutY="-2.0" onAction="#MenuPrincipal" text="Regresar" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="17.0" />
+         </font>
+      </Hyperlink>
+      <Label layoutX="52.0" layoutY="53.0" text="Codigo Medico" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="90.0" text="Codigo Especialidad" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="126.0" text="Codigo Horario" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbcodigoMedico" layoutX="167.0" layoutY="49.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbcodigoEspecialidad" layoutX="167.0" layoutY="86.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbcodigoHorario" layoutX="167.0" layoutY="122.0" prefWidth="150.0" />
+      <TableView fx:id="tblespecialidades" layoutX="44.0" layoutY="182.0" onMouseClicked="#seleccionar" prefHeight="200.0" prefWidth="538.0">
+        <columns>
+          <TableColumn fx:id="colcodigoMe" prefWidth="99.0" text="Codigo ME" />
+          <TableColumn fx:id="colcodigoMedico" prefWidth="138.0" text="Codigo Medico" />
+            <TableColumn fx:id="colcodigoEspecialidad" prefWidth="152.0" text="Codigo Especialidad" />
+            <TableColumn fx:id="colcodigoHorario" prefWidth="148.0" text="Codigo Horario" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnagregar" layoutX="14.0" layoutY="393.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="31.0" prefWidth="101.0" text="Agregar">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btneliminar" layoutX="128.0" layoutY="393.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="31.0" prefWidth="101.0" text="Eliminar">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btneditar" layoutX="242.0" layoutY="393.0" mnemonicParsing="false" onAction="#edit" prefHeight="31.0" prefWidth="101.0" text="Editar">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnreporte" layoutX="365.0" layoutY="393.0" mnemonicParsing="false" onAction="#imprimirReporte" prefHeight="31.0" prefWidth="101.0" text="Reporte">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="335.0" layoutY="53.0" text="Codigo Medico E." textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbcodigoMedicoEspecialidad" layoutX="457.0" layoutY="50.0" prefWidth="150.0" />
+      <Button fx:id="btnreporteGeneral" layoutX="482.0" layoutY="393.0" mnemonicParsing="false" onAction="#imprimirReporteGeneral" text="Reporte General">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

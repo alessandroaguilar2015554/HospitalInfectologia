@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="523.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alessandroaguilar.controller.AreasController">
+   <children>
+      <ImageView fitHeight="525.0" fitWidth="701.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/descarga%20(1).jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="14.0" text="Areas" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="42.0" />
+         </font>
+      </Label>
+      <Hyperlink layoutX="438.0" onAction="#MenuPrincipal" text="Regresar" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="17.0" />
+         </font>
+      </Hyperlink>
+      <Label layoutX="55.0" layoutY="80.0" text="Codigo Area" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="119.0" text="Nombre Cargo" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtnombreCargo" layoutX="154.0" layoutY="115.0" />
+      <ComboBox fx:id="cmbcodigoArea" layoutX="154.0" layoutY="75.0" prefWidth="150.0" />
+      <TableView fx:id="tblareas" layoutX="65.0" layoutY="203.0" onMouseClicked="#seleccionar" prefHeight="200.0" prefWidth="408.0">
+        <columns>
+          <TableColumn fx:id="colcodigoArea" prefWidth="200.0" text="Codigo Area" />
+          <TableColumn fx:id="colnombreCargo" prefWidth="207.0" text="Nombre Cargo" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnagregar" layoutX="13.0" layoutY="448.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="31.0" prefWidth="85.0" text="Agregar">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btneditar" layoutX="105.0" layoutY="448.0" mnemonicParsing="false" onAction="#edit" prefHeight="31.0" prefWidth="85.0" text="Editar">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btneliminar" layoutX="198.0" layoutY="448.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="31.0" prefWidth="85.0" text="Eliminar">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnreporte" layoutX="290.0" layoutY="449.0" mnemonicParsing="false" onAction="#imprimirReporte" prefHeight="31.0" prefWidth="85.0" text="Reporte">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnreporteGeneral" layoutX="387.0" layoutY="449.0" mnemonicParsing="false" onAction="#imprimirReporteGeneral" text="Reporte General" />
+   </children>
+</AnchorPane>

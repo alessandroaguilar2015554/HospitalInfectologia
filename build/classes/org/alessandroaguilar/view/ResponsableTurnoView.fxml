@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alessandroaguilar.controller.ResponsableTurnoController">
+   <children>
+      <ImageView fitHeight="408.0" fitWidth="647.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/thumb2-blue-neon-masonry-texture-neon-brick-texture-black-background-neon-abstraction-masonry.jpg" />
+         </image>
+      </ImageView>
+      <Hyperlink layoutX="552.0" layoutY="7.0" onAction="#MenuPrincipal" text="Regresar" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="17.0" />
+         </font>
+      </Hyperlink>
+      <Label layoutX="14.0" layoutY="-2.0" text="Responsable Turno" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="63.0" text="Nombre Responsable" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="10.0" layoutY="102.0" text="Apellidos Responsable" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="146.0" text="Telefono Responsable" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtnombres" layoutX="171.0" layoutY="59.0" />
+      <TextField fx:id="txtapellidos" layoutX="171.0" layoutY="98.0" />
+      <TextField fx:id="txttelefonoResponsable" layoutX="171.0" layoutY="142.0" />
+      <Label layoutX="382.0" layoutY="64.0" text="Codigo Area" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbcodigoArea" layoutX="477.0" layoutY="60.0" prefWidth="150.0" />
+      <Label layoutX="379.0" layoutY="103.0" text="Codigo Cargo" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbcodigoCargo" layoutX="477.0" layoutY="99.0" prefWidth="150.0" />
+      <TableView fx:id="tblresponsableTurno" layoutX="7.0" layoutY="193.0" onMouseClicked="#seleccionar" prefHeight="200.0" prefWidth="516.0">
+        <columns>
+          <TableColumn fx:id="colcodigoResponsable" prefWidth="96.0" text="Codigo Responsable" />
+          <TableColumn fx:id="colnombres" prefWidth="70.0" text="Nombre Responsable" />
+            <TableColumn fx:id="colapellidos" prefWidth="86.0" text="Apellidos Responsable" />
+            <TableColumn fx:id="coltelefonos" prefWidth="78.0" text="Telefono Personal" />
+            <TableColumn fx:id="colcodigoArea" prefWidth="90.0" text="Codigo Area" />
+            <TableColumn fx:id="colcodigoCargo" prefWidth="95.0" text="Codigo Cargo" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnagregar" layoutX="545.0" layoutY="200.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="31.0" prefWidth="85.0" text="Agregar">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btneditar" layoutX="545.0" layoutY="253.0" mnemonicParsing="false" onAction="#edit" prefHeight="31.0" prefWidth="85.0" text="Editar">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btneliminar" layoutX="545.0" layoutY="305.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="31.0" prefWidth="85.0" text="Eliminar">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnreporte" layoutX="545.0" layoutY="354.0" mnemonicParsing="false" onAction="#imprimirReporte" prefHeight="31.0" prefWidth="85.0" text="Reporte">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnreporteGeneral" layoutX="502.0" layoutY="153.0" mnemonicParsing="false" onAction="#imprimirReporteGeneral" text="Reporte General">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alessandroaguilar.controller.PacientesController">
+   <children>
+      <ImageView fitHeight="479.0" fitWidth="854.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/SB-fullslab.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="27.0" layoutY="3.0" prefHeight="60.0" prefWidth="179.0" text="Pacientes" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="37.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbcodigoPaciente" layoutX="131.0" layoutY="67.0" prefWidth="150.0" />
+      <Label layoutX="24.0" layoutY="70.0" prefHeight="25.0" prefWidth="101.0" text="Codigo Paciente" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="87.0" layoutY="215.0" prefHeight="25.0" prefWidth="31.0" text="DPI" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDpi" layoutX="127.0" layoutY="212.0" />
+      <TableView fx:id="tblpacientes" layoutX="24.0" layoutY="252.0" onMouseClicked="#seleccionar" prefHeight="200.0" prefWidth="708.0">
+        <columns>
+          <TableColumn fx:id="colcodigoPaciente" prefWidth="85.0" text="Codigo Paciente" />
+          <TableColumn fx:id="colnombre" prefWidth="87.0" text="Nombre" />
+            <TableColumn fx:id="colapellido" prefWidth="79.0" text="Apellido" />
+            <TableColumn fx:id="coledad" prefWidth="49.0" text="Edad" />
+            <TableColumn fx:id="coldpi" prefWidth="75.0" text="DPI" />
+            <TableColumn fx:id="colfechaNacimiento" prefWidth="111.0" text="Fecha Nacimiento" />
+            <TableColumn fx:id="coldireccion" prefWidth="76.0" text="Direccion" />
+            <TableColumn fx:id="colocupacion" prefWidth="76.0" text="Ocupacion" />
+            <TableColumn fx:id="colsexo" prefWidth="68.0" text="Sexo" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtapellido" layoutX="127.0" layoutY="137.0" />
+      <Label layoutX="62.0" layoutY="140.0" prefHeight="25.0" prefWidth="54.0" text="Apellido" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="62.0" layoutY="105.0" prefHeight="25.0" prefWidth="54.0" text="Nombre" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtnombre" layoutX="127.0" layoutY="102.0" />
+      <GridPane fx:id="grpfechaNacimiento" layoutX="458.0" layoutY="82.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <DatePicker fx:id="dtpfechaNacimiento" />
+         </children>
+      </GridPane>
+      <Label layoutX="326.0" layoutY="87.0" text="Fecha Nacimiento" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtedad" layoutX="127.0" layoutY="177.0" />
+      <Label layoutX="81.0" layoutY="183.0" prefHeight="19.0" prefWidth="42.0" text="Edad" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="368.0" layoutY="133.0" prefHeight="19.0" prefWidth="66.0" text="Direccion" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtdireccion" layoutX="446.0" layoutY="130.0" />
+      <TextField fx:id="txtocupacion" layoutX="446.0" layoutY="168.0" />
+      <Label layoutX="370.0" layoutY="174.0" text="Ocupacion" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="401.0" layoutY="207.0" text="Sexo" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtsexo" layoutX="446.0" layoutY="204.0" />
+      <Hyperlink layoutX="744.0" layoutY="21.0" onAction="#MenuPrincipal" text="Regresar" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="12.0" />
+         </font></Hyperlink>
+      <Button fx:id="btnagregar" layoutX="751.0" layoutY="252.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="25.0" prefWidth="81.0" text="Agregar">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font></Button>
+      <Button fx:id="btneditar" layoutX="751.0" layoutY="308.0" mnemonicParsing="false" onAction="#edit" prefHeight="25.0" prefWidth="81.0" text="Editar">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font></Button>
+      <Button fx:id="btneliminar" layoutX="751.0" layoutY="366.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="25.0" prefWidth="81.0" text="Eliminar">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font></Button>
+      <Button fx:id="btnreporte" layoutX="751.0" layoutY="427.0" mnemonicParsing="false" onAction="#imprimirReporte" prefHeight="25.0" prefWidth="81.0" text="Reporte">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font></Button>
+      <Button fx:id="btnreporteGeneral" layoutX="732.0" layoutY="195.0" mnemonicParsing="false" onAction="#imprimirReporteGeneral" prefHeight="25.0" prefWidth="108.0" text="Reporte General">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

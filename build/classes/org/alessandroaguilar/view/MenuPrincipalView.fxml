@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="599.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alessandroaguilar.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="359.0" fitWidth="600.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/3.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/femenino.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="188.0" fitWidth="437.0" layoutX="-18.0" layoutY="-40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/button.png" />
+         </image>
+      </ImageView>
+      <MenuBar layoutX="36.0" layoutY="38.0" prefHeight="32.0" prefWidth="264.0" style="-fx-background-color: FF3F2D;">
+        <menus>
+          <Menu mnemonicParsing="false" text="Modulos">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaPaciente" text="Pacientes" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaMedico" text="Medicos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaHorarios" text="Horarios" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTelefonoMedico" text="Telefono Medico" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaEspecialidades" text="Especialidades" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaMedicoEspecialidades" text="Medico Especialidad" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTurno" text="Turnos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaResponsableTurno" text="Responsables Turnos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaContactoUrgencias" text="Contacto Urgencia" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaAreas" text="Areas" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaCargos" text="Cargos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaReceta" text="Recetas" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaControlCita" text="Control Citas" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Reportes">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Reporte de citas" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Acerca de">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaProgramador" text="Programador" />
+                  <MenuItem mnemonicParsing="false" onAction="#salir" text="Salir" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fitHeight="188.0" fitWidth="221.0" layoutX="3.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/d5kddy9-6e44eb75-87c4-427f-b0bb-d5ddc6d7df59.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="693.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alessandroaguilar.controller.HorariosController">
+   <children>
+      <ImageView fitHeight="501.0" fitWidth="695.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/senal-neon_110233-556.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="22.0" text="Horarios" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="32.0" />
+         </font>
+      </Label>
+      <Hyperlink layoutX="608.0" layoutY="8.0" onAction="#MenuPrincipal" text="Regresar" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="16.0" />
+         </font>
+      </Hyperlink>
+      <Label layoutX="22.0" layoutY="68.0" text="Codigo Horario" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="107.0" text="Hora Inicio" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="143.0" text="Hora Salida" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblhorarios" layoutX="6.0" layoutY="252.0" onMouseClicked="#seleccionar" prefHeight="200.0" prefWidth="541.0">
+        <columns>
+          <TableColumn fx:id="colcodigoHorario" prefWidth="77.0" text="Codigo Horario" />
+          <TableColumn fx:id="colhoraInicio" prefWidth="73.0" text="Hora Inicio" />
+            <TableColumn fx:id="colhoraSalida" text="Hora Salida" />
+            <TableColumn fx:id="collunes" prefWidth="51.0" text="Lunes" />
+            <TableColumn fx:id="colmartes" prefWidth="58.0" text="Martes" />
+            <TableColumn fx:id="colmiercoles" prefWidth="78.0" text="Miercoles" />
+            <TableColumn fx:id="coljueves" prefWidth="61.0" text="Jueves" />
+            <TableColumn fx:id="colviernes" prefWidth="62.0" text="Viernes" />
+        </columns>
+      </TableView>
+      <Label layoutX="334.0" layoutY="47.0" text="Lunes" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="329.0" layoutY="84.0" text="Martes" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="320.0" layoutY="122.0" text="Miercoles" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="330.0" layoutY="159.0" text="Jueves" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="328.0" layoutY="193.0" text="Viernes" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbcodigoHorario" layoutX="142.0" layoutY="64.0" prefWidth="150.0" />
+      <GridPane fx:id="grphoraInicio" layoutX="142.0" layoutY="103.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <DatePicker fx:id="dtphoraInicio" />
+         </children>
+      </GridPane>
+      <GridPane fx:id="grphoraSalida" layoutX="142.0" layoutY="139.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <DatePicker fx:id="dtphoraSalida" />
+         </children>
+      </GridPane>
+      <TextField fx:id="txtlunes" layoutX="398.0" layoutY="42.0" />
+      <TextField fx:id="txtmartes" layoutX="398.0" layoutY="80.0" />
+      <TextField fx:id="txtmiercoles" layoutX="398.0" layoutY="118.0" />
+      <TextField fx:id="txtjueves" layoutX="398.0" layoutY="154.0" />
+      <TextField fx:id="txtviernes" layoutX="398.0" layoutY="189.0" />
+      <Button fx:id="btnagregar" layoutX="585.0" layoutY="297.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="31.0" prefWidth="86.0" text="Agregar">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btneliminar" layoutX="585.0" layoutY="336.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="31.0" prefWidth="86.0" text="Eliminar">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btneditar" layoutX="585.0" layoutY="377.0" mnemonicParsing="false" onAction="#edit" prefHeight="31.0" prefWidth="86.0" text="Editar">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnreporte" layoutX="585.0" layoutY="420.0" mnemonicParsing="false" onAction="#imprimirReporte" prefHeight="31.0" prefWidth="86.0" text="Reporte">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnreporteGeneral" layoutX="555.0" layoutY="252.0" mnemonicParsing="false" onAction="#imprimirReporteGeneral" prefHeight="32.0" prefWidth="138.0" text="Reporte General">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

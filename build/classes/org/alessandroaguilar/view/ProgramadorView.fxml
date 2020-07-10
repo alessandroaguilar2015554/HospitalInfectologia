@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="336.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alessandroaguilar.controller.ProgramadorController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+         <image>
+            <Image url="@../images/UHZ2_YEdvtBoHg4Ws4b2Nw_store_banner_image.jpeg" />
+         </image>
+      </ImageView>
+      <TextField alignment="CENTER" editable="false" layoutX="258.0" layoutY="38.0" prefHeight="31.0" prefWidth="156.0" text="Programador">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <TextField alignment="CENTER" editable="false" layoutX="257.0" layoutY="77.0" text="Jose Alessandro">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <TextField alignment="CENTER" editable="false" layoutX="427.0" layoutY="77.0" text="Aguilar Argueta">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <TextField alignment="CENTER" editable="false" layoutX="256.0" layoutY="114.0" text="Codigo Tecnico">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <TextField alignment="CENTER" editable="false" layoutX="257.0" layoutY="155.0" text="IN5BM">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <TextField alignment="CENTER" editable="false" layoutX="256.0" layoutY="185.0" text="No. Carnet">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <TextField alignment="CENTER" editable="false" layoutX="257.0" layoutY="222.0" text="2015-554">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <TextField alignment="CENTER" editable="false" layoutX="256.0" layoutY="255.0" text="Clave">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <TextField alignment="CENTER" editable="false" layoutX="257.0" layoutY="292.0" text="clave 1">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="32.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/585e4beacb11b227491c3399.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="188.0" fitWidth="199.0" layoutX="12.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/d5kddy9-6e44eb75-87c4-427f-b0bb-d5ddc6d7df59.png" />
+         </image>
+      </ImageView>
+      <Hyperlink layoutX="493.0" layoutY="24.0" onAction="#MenuPrincipal" text="Regresar" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="15.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>

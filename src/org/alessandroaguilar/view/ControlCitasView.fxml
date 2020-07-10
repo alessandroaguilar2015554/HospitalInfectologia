@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="437.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alessandroaguilar.controller.ControlCitasController">
+   <children>
+      <ImageView fitHeight="464.0" fitWidth="784.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/SB-fullslab.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="414.0" fitWidth="801.0" layoutX="-84.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/267455057019211.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="245.0" fitWidth="256.0" layoutX="565.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/112991-glowing-purple-neon-icon-business-calendar-300x300.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="14.0" prefHeight="39.0" prefWidth="185.0" text="Control Citas">
+         <font>
+            <Font name="Comic Sans MS Bold" size="28.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#e07ae8" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Hyperlink layoutX="687.0" layoutY="5.0" onAction="#MenuPrincipal" prefHeight="30.0" prefWidth="80.0" text="Regresar">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="15.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#c083c6" />
+                  <Stop color="#bf84c4" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Hyperlink>
+      <Label layoutX="421.0" layoutY="56.0" text="Fecha" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font>
+      </Label>
+      <GridPane fx:id="grpfecha" layoutX="562.0" layoutY="50.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <DatePicker fx:id="dtpfecha" />
+         </children>
+      </GridPane>
+      <Label layoutX="422.0" layoutY="87.0" text="Hora Inicio" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="421.0" layoutY="113.0" text="Hora Salida" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txthoraInicio" layoutX="519.0" layoutY="84.0" />
+      <TextField fx:id="txthoraSalida" layoutX="519.0" layoutY="110.0" />
+      <Label layoutX="55.0" layoutY="47.0" text="Codigo Medico" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="78.0" text="Codigo Paciente" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbcodigoMedico" layoutX="176.0" layoutY="44.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbcodigoPaciente" layoutX="176.0" layoutY="75.0" prefWidth="150.0" />
+      <Label layoutX="73.0" layoutY="113.0" text="Codigo Cita" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbcodigoCita" layoutX="176.0" layoutY="110.0" prefWidth="150.0" />
+      <Button fx:id="btnreporteGeneral" layoutX="506.0" layoutY="169.0" mnemonicParsing="false" onAction="#imprimirReporteGeneral" prefHeight="29.0" prefWidth="126.0" style="-fx-background-color: #7b2c82;" text="Reporte General" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="13.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tblcontrolCitas" layoutX="28.0" layoutY="175.0" onMouseClicked="#seleccionar" prefHeight="245.0" prefWidth="440.0">
+        <columns>
+          <TableColumn fx:id="colcodigoMedico" prefWidth="73.0" text="Codigo Medico" />
+          <TableColumn fx:id="colcodigoPaciente" prefWidth="68.0" text="Codigo Paciente" />
+            <TableColumn fx:id="colcodigoCita" prefWidth="69.0" text="Codigo Cita" />
+            <TableColumn fx:id="colfecha" prefWidth="75.0" text="Fecha" />
+            <TableColumn fx:id="colhoraInicio" prefWidth="76.0" text="Hora Inicio" />
+            <TableColumn fx:id="colhoraSalida" prefWidth="78.0" text="Hora Salida" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnreporte" layoutX="510.0" layoutY="205.0" mnemonicParsing="false" onAction="#imprimirReporte" prefHeight="29.0" prefWidth="100.0" style="-fx-background-color: #7b2c82;" text="Reporte" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnagregar" layoutX="510.0" layoutY="244.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="29.0" prefWidth="100.0" style="-fx-background-color: #7b2c82;" text="Agregar" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btneditar" layoutX="510.0" layoutY="283.0" mnemonicParsing="false" onAction="#edit" prefHeight="29.0" prefWidth="100.0" style="-fx-background-color: #7b2c82;" text="Editar" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btneliminar" layoutX="510.0" layoutY="329.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="29.0" prefWidth="100.0" style="-fx-background-color: #7b2c82;" text="Eliminar" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
